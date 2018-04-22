@@ -1,0 +1,77 @@
+{
+	"id": "P1",
+	"name": "Ayush Brigaraj Shampoo",
+	"imgPath":"",
+    "ingredients" : [{
+        "id":"i1",
+		"name":"Bhrigraj",
+		"label": "A",
+		"imgPath": "https://5.imimg.com/data5/LH/PK/MY-3986093/bhringraj-powder-500x500.jpg",
+		"trails" : [{
+						"id": "t11",
+						"name": "Farming",
+						"place": "Wayanad", 
+						"lat": 11.685358,
+						"lng": 76.131995,
+						"desc": "This is the desc for T1 step1",
+						"draggable": true
+					},
+					{
+						"id": "t12",
+						"name": "Processing",
+						"place": "Trivandrum", 
+						"lat": 8.524139,
+						"lng": 76.936638,
+						"desc": "This is the desc for T1 step2",
+						"draggable": true
+					},
+					{
+						"id": "t13",
+						"name": "Packing",
+						"place": "Kottayam", 
+						"lat": 9.591567,
+						"lng": 76.522153,
+						"desc": "This is the desc for T1 step3",
+						"draggable": true
+					}
+					]		
+        
+    }, 
+	
+	{
+        "id":"i2",
+		"name":"Bhringamalakadi Tailam",
+		"label": "B",
+		"imgPath": "https://5.imimg.com/data5/AG/KW/MY-37961915/karpasasthyadi-thailam-500x500.jpg",
+		"trails" : [{
+						"id": "t21",
+						"name": "Farming",
+						"place": "Kashmir", 
+						"lat": 33.778175,
+						"lng": 76.576171,
+						"desc": "This is the desc for T2 step1",
+						"draggable": true
+					},
+					{
+						"id": "t22",
+						"name": "Processing",
+						"place": "Jersey City, NJ, USA", 
+						"lat": 40.728157,
+						"lng": -74.077644,
+						"desc": "This is the desc for T2 step2",
+						"draggable": true
+					},
+					{
+						"id": "t23",
+						"name": "Labeling & Packing",
+						"place": "Venezuela", 
+						"lat": 6.423750,
+						"lng": -66.589730,
+						"desc": "This is the desc for T2 step3",
+						"draggable": true
+					}
+					]		
+        
+    }
+	]
+}

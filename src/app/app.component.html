@@ -1,0 +1,49 @@
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+      <h4  *ngIf="productData">{{productData.name}}</h4>
+      <ul class="list-group" *ngIf="ingredients"> 
+            <li class="list-group-item" *ngFor="let ingredient of ingredients" > 
+                    <div class="row" style="padding-left: 15px">
+                        <img class="ingredient-img" src= {{ingredient.imgPath}}  alt="">
+                        <a (click)="sideBarLinkClicked(ingredient)">  {{ingredient.name}}</a><br/>
+                    </div>
+                <ul class="list-group" *ngIf="ingredient.trails">
+                    <li class="list-group-item trail" *ngFor="let trail of ingredient.trails"> 
+                            <a (click)="sideBarLinkClicked(trail)">  {{trail.name}}</a><br/>
+                    </li> 
+                </ul>
+            </li> 
+        </ul> 
+  </div>
+  <div id="page-content-wrapper">
+      <div class="page-content">
+          <!-- <div class="container2"> -->
+              <div class="row">
+                  <div class="col-md-12">
+                        <!-- <div class="form-group" *ngIf="this.searchControl">
+                          <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off"
+                          type="text" class="form-control" #search [formControl]="searchControl" size="100">
+                        </div> -->
+                      
+                        <agm-map (mapReady)="storeMapReady($event)" #storeMap  [usePanning]="true"
+                        (mapClick)="mapClicked($event)" [latitude]="latitude" [longitude]="longitude"  *ngIf="trailList">
+                        
+                          <agm-marker *ngFor="let marker of trailList"  [markerDraggable]="marker.draggable" [label]="marker.label"
+                            [latitude]="marker.lat" [longitude]="marker.lng" 
+                            (markerClick)="openWindow(marker.id)"
+                            (dragEnd)="markerDragEnd(marker, $event)">
+                            <agm-info-window 
+                            [isOpen]="isInfoWindowOpen(marker.id)"
+                            [latitude]="marker.lat" 
+                            [longitude]="marker.lng">                
+                              <app-info-window-content [childData]="marker"></app-info-window-content>
+                            </agm-info-window>
+                          </agm-marker>  
+                      </agm-map>
+                  </div>
+              </div>
+          <!-- </div> -->
+      </div>
+  </div>
+  
+</div>
